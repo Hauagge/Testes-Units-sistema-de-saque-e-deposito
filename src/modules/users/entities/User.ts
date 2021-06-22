@@ -12,7 +12,7 @@ import { Statement } from '../../statements/entities/Statement';
 @Entity('users')
 export class User {
   @PrimaryGeneratedColumn('uuid')
-  id?: string;
+  id: string;
 
   @Column()
   name: string;
@@ -24,7 +24,7 @@ export class User {
   password: string;
 
   @OneToMany(() => Statement, statement => statement.user)
-  statement: Account[];
+  statement: Statement[];
 
   @CreateDateColumn()
   created_at: Date;

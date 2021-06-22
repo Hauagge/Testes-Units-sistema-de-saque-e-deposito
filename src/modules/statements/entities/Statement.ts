@@ -10,15 +10,15 @@ import { v4 as uuid } from 'uuid';
 
 import { User } from '../../users/entities/User';
 
-enum OperationType {
+ enum OperationType {
   DEPOSIT = 'deposit',
   WITHDRAW = 'withdraw',
 }
-
+export { OperationType}
 @Entity('statements')
-export class Statement {
+export  class Statement {
   @PrimaryGeneratedColumn('uuid')
-  id?: string;
+  id: string;
 
   @Column('uuid')
   user_id: string;
