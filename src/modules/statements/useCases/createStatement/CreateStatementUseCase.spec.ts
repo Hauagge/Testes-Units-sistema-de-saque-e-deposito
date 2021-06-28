@@ -73,7 +73,6 @@ describe("Create User", () => {
         description:"Food"
 
         })
-        console.log(withdraw)
     expect(withdraw.amount).toBe(200);
     expect(withdraw.description).toBe("Food");
 
